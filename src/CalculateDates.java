@@ -1,3 +1,4 @@
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -30,5 +31,15 @@ public class CalculateDates {
         System.out.println("Instant:");
         System.out.println("pastWeekInstant = " + pastWeekInstant);
         System.out.println("plusWeekInstant = " + plusWeekInstant);
+        System.out.println();
+
+        System.out.println("----------------------------Calculando duração----------------------------");
+        Duration t1 = Duration.between(pastWeekLocalDate.atStartOfDay(),d1.atStartOfDay());
+        Duration t2 = Duration.between(pastWeekLocalDateTime,d2);
+        Duration t3 = Duration.between(pastWeekInstant,d3);
+
+        System.out.println("T1 dias = " + t1.toDays());
+        System.out.println("T2 dias = " + t2.toDays());
+        System.out.println("T3 dias = " + t3.toDays());
     }
 }
